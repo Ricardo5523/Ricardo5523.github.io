@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flores para Alguien Especial</title>
+  <link rel="stylesheet" href="./css/dedicar.css">
+</head>
+<body>
+  <div class="container">
+    <div class="flowers"></div>
+    <div class="message">
+      <h1>Eres mi flor más especial  🌸</h1>
+      <p>Gracias por iluminar mi vida con tu sonrisa, por estar hay conmigo aun sabiendo mi mal genio, por ser cariñosa y siempre mimarme, por siempre decirme todo lo que sientes cada cosa que haces lo aprecio mucho eres una hermosura de mujer que todo el mundo deciaria tener en su vida.</p> 
+      <p>Me gusta mucho tenerte a mi estar abrazados, darte besos en esa hermosa carita, el querer siempre dar detalles aunque no me deje jajaja, el pasar tiempo juntos hablando en la amaca, el estar jugando o comiendo fideos juntos, cada momento a tu lado me gusta mucho gracias por todo lo que haz echo hasta el dia de hoy te quiero muchooo!</p>
+      <p>Tal vez no sea tan bueno con las palabras pero al menos lo intento espero ayas tenido un hermoso dia y que tengas FELIZ NAVIDAD.❤️💕😘</p>
+       </div>
+  </div>
+  <audio class="hidden-audio" autoplay loop>
+    <source src="musica.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    const flowersContainer = document.querySelector('.flowers');
+
+function createFlower() {
+  const flower = document.createElement('div');
+  flower.classList.add('flower');
+
+  const size = Math.random() * 50 + 10;
+  flower.style.width = `${size}px`;
+  flower.style.height = `${size}px`;
+
+  flower.style.left = `${Math.random() * 100}%`;
+  flower.style.animationDuration = `${Math.random() * 3 + 2}s`;
+  flower.style.animationDelay = `${Math.random() * 2}s`;
+
+  flowersContainer.appendChild(flower);
+
+  setTimeout(() => flower.remove(), 5000);
+}
+setInterval(createFlower, 300);
+const audio = document.querySelector('.hidden-audio');
+setTimeout(() => {
+audio.volume = 0.5;
+audio.play();
+}, 2000 ); 
+  </script>
+</body>
+</html>

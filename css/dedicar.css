@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    overflow: hidden;
+  }
+  
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 10;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .message h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .message p {
+    font-size: 1.5rem;
+  }
+  
+  .flowers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .flower {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #ff9a9e, #ff6f91);
+    border-radius: 50%;
+    animation: float 5s infinite ease-in-out;
+    z-index: 5;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(100vh) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  #musica {
+    display: none;
+  }
